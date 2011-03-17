@@ -41,6 +41,12 @@
 		AC225FB61327F666004A054B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC225FB51327F666004A054B /* SystemConfiguration.framework */; };
 		AC225FB81327F66F004A054B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC225FB71327F66F004A054B /* MobileCoreServices.framework */; };
 		AC225FBA1327F67F004A054B /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC225FB91327F67F004A054B /* libz.1.2.3.dylib */; };
+		ACE3CBB41332547B004615BC /* iPoloniaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE3CBB31332547B004615BC /* iPoloniaCell.xib */; };
+		ACE3CC1713325629004615BC /* comments48.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE3CC1313325629004615BC /* comments48.png */; };
+		ACE3CC1813325629004615BC /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE3CC1413325629004615BC /* like.png */; };
+		ACE3CC1913325629004615BC /* r0dAs.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE3CC1513325629004615BC /* r0dAs.png */; };
+		ACE3CC1A13325629004615BC /* s0b.png in Resources */ = {isa = PBXBuildFile; fileRef = ACE3CC1613325629004615BC /* s0b.png */; };
+		ACE3CC2813325726004615BC /* iPoloniaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3CC2713325726004615BC /* iPoloniaCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +109,13 @@
 		AC225FB51327F666004A054B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AC225FB71327F66F004A054B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AC225FB91327F67F004A054B /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		ACE3CBB31332547B004615BC /* iPoloniaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iPoloniaCell.xib; sourceTree = "<group>"; };
+		ACE3CC1313325629004615BC /* comments48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments48.png; sourceTree = "<group>"; };
+		ACE3CC1413325629004615BC /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		ACE3CC1513325629004615BC /* r0dAs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r0dAs.png; sourceTree = "<group>"; };
+		ACE3CC1613325629004615BC /* s0b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s0b.png; sourceTree = "<group>"; };
+		ACE3CC2613325726004615BC /* iPoloniaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPoloniaCell.h; sourceTree = "<group>"; };
+		ACE3CC2713325726004615BC /* iPoloniaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPoloniaCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +156,8 @@
 				1D3623250D0F684500981E51 /* iPoloniaAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* iPoloniaViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* iPoloniaViewController.m */,
+				ACE3CC2613325726004615BC /* iPoloniaCell.h */,
+				ACE3CC2713325726004615BC /* iPoloniaCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -183,6 +198,7 @@
 				2899E5210DE3E06400AC0155 /* iPoloniaViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* iPolonia-Info.plist */,
+				ACE3CBB31332547B004615BC /* iPoloniaCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -205,6 +221,10 @@
 		AC225F411327F44E004A054B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				ACE3CC1313325629004615BC /* comments48.png */,
+				ACE3CC1413325629004615BC /* like.png */,
+				ACE3CC1513325629004615BC /* r0dAs.png */,
+				ACE3CC1613325629004615BC /* s0b.png */,
 				AC225F421327F44E004A054B /* arrow.png */,
 				AC225F431327F44E004A054B /* back.png */,
 				AC225F441327F44E004A054B /* iEnPolonia_icon.png */,
@@ -318,6 +338,11 @@
 				AC225F481327F44E004A054B /* iEnPolonia_icon.png in Resources */,
 				AC225F491327F44E004A054B /* iEnPolonia_icon@2x.png in Resources */,
 				AC225F931327F520004A054B /* WebViewController.xib in Resources */,
+				ACE3CBB41332547B004615BC /* iPoloniaCell.xib in Resources */,
+				ACE3CC1713325629004615BC /* comments48.png in Resources */,
+				ACE3CC1813325629004615BC /* like.png in Resources */,
+				ACE3CC1913325629004615BC /* r0dAs.png in Resources */,
+				ACE3CC1A13325629004615BC /* s0b.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +372,7 @@
 				AC225F901327F520004A054B /* GDataXMLElement-Extras.m in Sources */,
 				AC225F911327F520004A054B /* GDataXMLNode.m in Sources */,
 				AC225F921327F520004A054B /* WebViewController.m in Sources */,
+				ACE3CC2813325726004615BC /* iPoloniaCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

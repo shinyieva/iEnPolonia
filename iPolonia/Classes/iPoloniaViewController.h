@@ -15,6 +15,7 @@
 #import "NSArray+Extras.h"
 #import "WebViewController.h"
 #import "PullRefreshTableViewController.h"
+#import "iPoloniaCell.h"
 
 @class WebViewController;
 

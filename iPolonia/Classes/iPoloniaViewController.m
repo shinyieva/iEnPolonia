@@ -199,68 +199,39 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    iPoloniaCell *cell = (iPoloniaCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"iPoloniaCell" owner:self options:nil];
+		cell = (iPoloniaCell *)[nib objectAtIndex:0];
     }
     
     RSSEntry *entry = [_allEntries objectAtIndex:indexPath.row];
 	
-    NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+   /* NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
+	*/
 	
-    cell.textLabel.text = entry.articleTitle;        
+	[cell.title setText:entry.articleTitle];
+	[cell.creator setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@.png",entry.creator]]];
+	[cell.likes setText:@"0"];
+	[cell.comments setText:entry.numComments];
+	
+   /* cell.textLabel.text = entry.articleTitle;        
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@ (%@)",articleDateString,entry.creator,entry.numComments];
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	
+	*/
     return cell;
 }
 
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- 
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source.
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }   
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
- }   
- }
- */
-
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-
 #pragma mark -
 #pragma mark Table view delegate
+
+- (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 60;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
